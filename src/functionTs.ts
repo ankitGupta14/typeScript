@@ -18,3 +18,20 @@ function getBookInfo(info: string){
     }
 }
 
+function bookDealer(): void { // this is a function that does not return anything, it just logs a message to the console
+    console.log("book dealer is open");
+}
+
+function calculatePrice(type?: string){
+
+}
+
+// this is a function that takes an optional parameter of type string and does not return anything. It can be used to calculate the price of a book based on its type, but since the implementation is not provided, it does not do anything at the moment.
+function sellBook(order:{
+    bookName: string;
+    price: number;
+    isAvailable: boolean;
+    bookType: "fiction" | "non-fiction" | "biography" | "self-help";
+}): number{
+    return 4
+} 
