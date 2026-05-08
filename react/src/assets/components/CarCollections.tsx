@@ -1,4 +1,12 @@
-export function CarCollections({name, model, year = false}) {
+interface CarCollectionProps {
+    name: string;
+    model: number | string;
+    year?: boolean;
+}
+
+
+
+export function CarCollections({name, model, year = false}: CarCollectionProps) {
     return(
         <article>
             <h2>
