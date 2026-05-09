@@ -5,7 +5,7 @@ interface CarCollectionProps {
 }
 
 
-
+ // ? optional props
 export function CarCollections({name, model, year = false}: CarCollectionProps) {
     return(
         <article>
