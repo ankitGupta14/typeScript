@@ -15,7 +15,13 @@ const [price, setPrice] = useState(1);
             onChange={(e:React.ChangeEvent<HTMLInputElement>) => 
                 setName(e.target.value)} 
                 />
-            
+            <label>Price </label>
+            <input 
+            value={price}
+            onChange={(e:React.ChangeEvent<HTMLInputElement>) => 
+                setPrice(Number(e.target.value))} 
+                />
+            <button type="submit">Submit</button>
         </form>;
     
 } 
