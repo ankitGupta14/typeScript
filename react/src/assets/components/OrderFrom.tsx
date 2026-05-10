@@ -7,6 +7,11 @@ interface OrderFromProps {
 export function OrderFrom({onSubmit}: OrderFromProps) {
 const [name, setName] = useState("Ankit");
 const [price, setPrice] = useState(1);
+
+function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    onSubmit({name, price});
+}   
    
         return  <form onSubmit = {handleSubmit}>
             <label>Cars Name </label>
@@ -15,7 +20,7 @@ const [price, setPrice] = useState(1);
             onChange={(e:React.ChangeEvent<HTMLInputElement>) => 
                 setName(e.target.value)} 
                 />
-            <label>Price </label>
+            <label>Price</label>
             <input 
             value={price}
             onChange={(e:React.ChangeEvent<HTMLInputElement>) => 
