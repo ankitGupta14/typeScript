@@ -2,6 +2,7 @@
 import './App.css'
 import {CarCollections} from './assets/components/CarCollections'
 import { Counter } from './assets/components/Counter';
+import {OrderFrom} from './assets/components/OrderFrom';
 function App() {
 
 
@@ -15,6 +16,9 @@ function App() {
       </div>
       <div>
         <Counter />
+      </div>
+      <div>
+        <OrderFrom onSubmit={(order) => console.log(order)} />
       </div>
     </>
   )
