@@ -8,7 +8,7 @@ export function OrderFrom({onSubmit}: OrderFromProps) {
 const [name, setName] = useState("Ankit");
 const [price, setPrice] = useState(1);
 
-function handleSubmit(e: React.FormEvent) {
+function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     onSubmit({name, price});
 }   
@@ -22,6 +22,7 @@ function handleSubmit(e: React.FormEvent) {
                 />
             <label>Price</label>
             <input 
+            type="number"
             value={price}
             onChange={(e:React.ChangeEvent<HTMLInputElement>) => 
                 setPrice(Number(e.target.value))} 
